@@ -98,6 +98,8 @@ export type CellComponentProps<Cell extends CellBase = CellBase> = {
   setCellDimensions: (point: Point, dimensions: Dimensions) => void;
   /** Set data of the cell */
   setCellData: (cell: Cell) => void;
+  /** Click on cell */
+  onClick?: (event: React.MouseEvent<HTMLDivElement>, cellProps: CellComponentProps<Cell>) => void;
 };
 
 /** Type of the Spreadsheet Cell component */
